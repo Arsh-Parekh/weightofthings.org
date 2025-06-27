@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dear Somebody — The Chai Club</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Sacramento&family=Crimson+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --background-color: #2e261f;
+      --primary-color: #fefcf9;
+      --accent-color: #cba974;
+      --border-color: #a28e7a;
+      --card-bg: #3c342d;
+      --texture: url('https://www.transparenttextures.com/patterns/french-paper.png');
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--background-color);
+      background-image: var(--texture);
+      color: var(--primary-color);
+      font-family: 'Crimson Text', serif;
+    }
+
+    header {
+      padding: 4rem 2rem 3rem;
+      text-align: center;
+      background-color: var(--background-color);
+      border-bottom: 3px dashed var(--border-color);
+    }
+
+    header h1 {
+      font-family: 'Sacramento', cursive;
+      font-size: 4rem;
+      margin-bottom: 0.5rem;
+      color: var(--accent-color);
+    }
+
+    header p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.2rem;
+      font-style: italic;
+      color: var(--primary-color);
+    }
+
+    nav {
+      text-align: center;
+      margin-bottom: 2rem;
+      padding-top: 0.5rem;
+    }
+
+    nav a {
+      color: var(--primary-color);
+      margin: 0 1.2rem;
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 1rem;
+      font-family: 'EB Garamond', serif;
+    }
+
+    nav a:hover {
+      color: var(--accent-color);
+    }
+
+    .letter-archive {
+      max-width: 800px;
+      margin: 2rem auto 4rem;
+      padding: 2rem;
+      background-color: rgba(255, 255, 255, 0.025);
+      border: 2px dashed var(--border-color);
+      border-radius: 14px;
+    }
+
+    .letter {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2rem 2rem 3.5rem; /* Add extra bottom padding */
+  margin: 2rem 1rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, max-height 0.4s ease;
+  overflow: hidden;
+  max-height: 220px; /* Slightly increased */
+  position: relative;
+}
+
+    .letter:hover {
+      transform: translateY(-5px);
+    }
+
+    .letter h2 {
+      font-family: 'Sacramento', cursive;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--accent-color);
+    }
+
+    .letter p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .letter.expanded {
+      max-height: 1000px;
+    }
+
+    .read-more {
+      display: block;
+      margin-top: 1rem;
+      color: var(--accent-color);
+      font-style: italic;
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #aaa;
+      padding: 2.5rem 1rem;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.read-more').forEach(btn => {
+        btn.addEventListener('click', function () {
+          const letter = this.closest('.letter');
+          letter.classList.toggle('expanded');
+          this.textContent = letter.classList.contains('expanded') ? 'Read less' : 'Read more';
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">The Chai Club</a>
+      <a href="symposiums.html">Symposiums</a>
+      <a href="dearsomebody.html">Dear Somebody</a>
+      <a href="reflections.html">Reflections</a>
+      <a href="fragments.html">Fragments</a>
+    </nav>
+    <h1>Dear Somebody</h1>
+    <p>A series within <em>The Chai Club</em> offering a space for anonymous letters — tender, reflective, and unfiltered. An open archive of voices that long to be heard.</p>
+  </header>
+
+  <section class="letter-archive">
+    <div class="letter">
+      <h2>Letter #01</h2>
+      <p>I never got to say goodbye. The room was full, yet somehow, I’ve never felt more alone. If you’re out there, know this — I carry your silence like an heirloom. I still replay our last conversation over and over in my mind, hoping to catch a trace of what you were trying to say, but couldn't. And now I write to you here, not to fill the silence, but to honour it.</p>
+      <span class="read-more">Read more</span>
+    </div>
+    <div class="letter">
+      <h2>Letter #02</h2>
+      <p>Sometimes I forget the sound of your laugh. And that terrifies me. Not because I don’t want to remember — but because I know memory isn’t meant to be permanent. Only cherished. What haunts me isn’t the forgetting, it’s the realization that I’m the only one left remembering. That this tender thread between us lives only in me now, fraying at the edges.</p>
+      <span class="read-more">Read more</span>
+    </div>
+    <div class="letter">
+      <h2>Letter #03</h2>
+      <p>I wrote this under the amber light of a borrowed desk lamp, listening to a playlist you’d probably hate. But this letter isn’t for you. It’s for the version of you I still love. The one who held my gaze too long in the stairwell. The one who left mid-sentence and took the warmth of the evening with him. I write because I never did say what I should have. And maybe that’s what this space is for.</p>
+      <span class="read-more">Read more</span>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 The Chai Club — All rights reserved.
+  </footer>
+</body>
+</html>
