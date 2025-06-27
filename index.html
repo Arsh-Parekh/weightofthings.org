@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Weight of Things</title>
+  <title>The Chai Club</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap">
   <style>
     :root {
-      --background-color: #f9f6f2;
+      --background-color: #3c2f1c;
       --primary-color: #3e3e3e;
       --accent-color: #5e574d;
+      --second-accent-color: #ddc79c;
       --link-color: #7b6952;
-      --highlight-color: #ece7e1;
+      --highlight-color: #e4d6c7;
     }
 
     html {
@@ -21,7 +22,7 @@
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Roboto', serif;
+      font-family: 'Playfair Display', serif;
       background-color: var(--background-color);
       color: var(--primary-color);
       overflow-x: hidden;
@@ -35,22 +36,43 @@
       height: 100vh;
       padding: 0 2rem;
       text-align: center;
-      background: var(--highlight-color);
+      background: url('https://www.transparenttextures.com/patterns/groovepaper.png'), var(--highlight-color);
+      background-size: cover;
+      position: relative;
+      animation: fadeInUp 1.5s ease-out forwards;
     }
 
     .hero h1 {
       font-family: 'Playfair Display', serif;
       font-size: 4rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
       color: var(--accent-color);
-      animation: fadeInUp 1.5s ease-out forwards;
+    }
+
+    .hero .subtitle {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: var(--link-color);
+      margin-bottom: 1rem;
     }
 
     .hero p {
       max-width: 600px;
-      font-size: 1.2rem;
-      font-style: italic;
-      animation: fadeInUp 2s ease-out forwards;
+      font-size: 1.1rem;
+      font-style: bold;
+    }
+
+    .scroll-down {
+      margin-top: 2rem;
+      font-size: 1.5rem;
+      color: var(--accent-color);
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+      40% {transform: translateY(-10px);}
+      60% {transform: translateY(-5px);}
     }
 
     nav {
@@ -59,7 +81,7 @@
     }
 
     nav a {
-      color: var(--link-color);
+      color: var(--second-accent-color);
       margin: 0 1rem;
       text-decoration: none;
       font-weight: 400;
@@ -67,11 +89,11 @@
     }
 
     nav a:hover {
-      color: var(--accent-color);
+      color: var(--second-accent-color);
     }
 
     section.featured {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 4rem auto;
       padding: 0 1rem;
     }
@@ -79,21 +101,35 @@
     .article {
       margin-bottom: 4rem;
       padding-bottom: 2rem;
+      display: flex;
+      gap: 2rem;
+      align-items: center;
       border-bottom: 1px solid #ddd;
       animation: fadeInUp 1.5s ease-out forwards;
+    }
+
+    .article:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .article img {
+      width: 300px;
+      height: auto;
+      border-radius: 4px;
     }
 
     .article h2 {
       font-family: 'Playfair Display', serif;
       font-size: 2rem;
-      color: var(--accent-color);
+      color: var(--second-accent-color);
       margin-bottom: 0.5rem;
     }
 
     .article p {
       font-size: 1rem;
-      line-height: 1.6;
-      max-width: 700px;
+      line-height: 1.7;
+      max-width: 600px;
+      color: var(--second-accent-color);
     }
 
     footer {
@@ -113,32 +149,112 @@
         transform: translateY(0);
       }
     }
+      .dear-somebody {
+  background-color: #3c2f1c; /* earthy brown tone */
+  padding: 6rem 2rem;
+  text-align: center;
+  color: #f3e8dc; /* warm parchment text */
+  font-family: 'Playfair Display', serif;
+}
+
+.dear-somebody h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #e8d7b3;
+}
+
+.dear-somebody p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #f3e8dc;
+}
+
+.dear-somebody .button {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.75rem 2rem;
+  border: 1.5px solid #f3e8dc;
+  color: #f3e8dc;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 25px;
+  transition: background 0.3s ease;
+}
+
+.dear-somebody .button:hover {
+  background-color: rgba(243, 232, 220, 0.1);
+}
+.read-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.4rem;
+  border: 1px solid var(--second-accent-color);
+  color: var(--second-accent-color);
+  font-family: 'Playfair Display', serif;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border-radius: 2rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.read-button:hover {
+  background-color: var(--second-accent-color);
+  color: var(--background-color);
+}
   </style>
 </head>
 <body>
   <section class="hero">
-    <h1>The Weight of Things</h1>
-    <p>A digital publication for thinkers, feelers, and world-builders. Somewhere between an archive and a love letter. A space for presence, memory, and the quiet joy of noticing.</p>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="articles.html">Articles</a>
-      <a href="chai.html">Chai Club</a>
-    </nav>
+    <h1>The Chai Club</h1>
+    <div class="subtitle">a digital publication & third-space</div>
+    <p> Somewhere between an archive and a love letter. A symposium for connection, presence and memory.</p>
+    <div class="scroll-down">↓</div>
   </section>
+
+  <nav>
+    <a href="index.html">The Chai Club</a>
+    <a href="symposiums.html">Symposiums</a>
+    <a href="dearsomebody.html">Dear Somebody</a>
+    <a href="reflections.html">Reflections</a>
+    <a href="fragments.html">Fragments</a>
+  </nav>
+
+<<section class="dear-somebody">
+  <div class="content">
+    <h2>Dear Somebody</h2>
+    <p>
+      A series within <em>The Chai Club</em> offering a space for anonymous letters. Reflective and unfiltered. 
+      An open archive of voices that long to be heard.
+    </p>
+    <a href="dearsomebody.html" class="button">Read Letters</a>
+  </div>
+</section>
 
   <section class="featured">
     <div class="article">
-      <h2>The Tenderness of Collage: Collecting as a Political Gesture</h2>
-      <p>A reflection on collecting, archiving, and the intimacy of building memory through fragments. What we save says something about what we long for.</p>
+      <img src="https://source.unsplash.com/400x300/?collage,archive" alt="Collage article image">
+      <div>
+        <h2>The Tenderness of Collage: Collecting as a Political Gesture</h2>
+        <p>A reflection on collecting, archiving, and the intimacy of building memory through fragments. What we save says something about what we long for.</p>
+         <a class="read-button" href="=article1.html">Read</a>
+      </div>
     </div>
     <div class="article">
-      <h2>Notes on Belonging: From Diaspora to Dinner Table</h2>
-      <p>Tracing how food rituals, smells, and kitchen stories help reconstruct identity across generations and oceans.</p>
+      <img src="https://source.unsplash.com/400x300/?dinner,belonging" alt="Dinner table article image">
+      <div>
+        <h2>Notes on Belonging: From Diaspora to Dinner Table</h2>
+        <p>Tracing how food rituals, smells, and kitchen stories help reconstruct identity across generations and oceans.</p>
+         <a class="read-button" href="article2.html">Read</a>
+      </div>
     </div>
   </section>
 
+  
+
   <footer>
-    <p>&copy; 2025 The Weight of Things. All rights reserved.</p>
+    <p>&copy; 2025 The Chai Club. All rights reserved.</p>
   </footer>
 </body>
 </html>
