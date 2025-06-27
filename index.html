@@ -1,140 +1,127 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Weight of Things</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <link rel="stylesheet" href="assets/css/main.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap">
   <style>
+    :root {
+      --background-color: #f9f6f2;
+      --primary-color: #3e3e3e;
+      --accent-color: #5e574d;
+      --link-color: #7b6952;
+    }
+
     body {
-      font-family: 'Playfair Display', serif;
-      color: #1a1a1a;
-      background-color: #fefcf9;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', serif;
+      background-color: var(--background-color);
+      color: var(--primary-color);
+      overflow-x: hidden;
     }
-    .logo {
-      font-size: 2.5em;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
-    .manifesto {
-      font-family: 'Roboto', sans-serif;
-      font-size: 1.15em;
-      max-width: 750px;
-      margin: 0 auto;
-      line-height: 1.8;
-      padding: 2em 1em;
+
+    header {
       text-align: center;
-    }
-    .post h2 {
+      padding: 4rem 1rem 2rem;
       font-family: 'Playfair Display', serif;
-      font-size: 1.8em;
     }
-    .post p {
-      font-family: 'Roboto', sans-serif;
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      color: var(--accent-color);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    nav {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    nav a {
+      color: var(--link-color);
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 400;
+    }
+
+    section.featured {
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 0 1rem;
+    }
+
+    .article {
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .article h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: var(--accent-color);
+    }
+
+    .article p {
+      font-size: 1rem;
+      line-height: 1.6;
+      max-width: 700px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #aaa;
+      padding: 3rem 1rem 2rem;
+    }
+
+    .fade-in {
+      animation: fadeIn ease 2s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes fadeIn {
+      0% {opacity:0;}
+      100% {opacity:1;}
     }
   </style>
 </head>
-<body class="is-preload">
-
-  <!-- Wrapper -->
-  <div id="wrapper" class="fade-in">
-
-    <!-- Intro -->
-    <div id="intro">
-      <h1 class="logo">THE WEIGHT OF THINGS</h1>
-      <p class="manifesto">
-        <em>The Weight of Things</em> is a digital publication for thinkers, feelers, and world-builders. We trace the intimate patterns behind art, memory, culture, and longing. Somewhere between an archive and a love letter, this is a space for presence, perspective, and the quiet joy of noticing.<br><br>
-        Our gatherings, essays, and obsessions are stitched together by an enduring belief: that nothing meaningful is ever truly weightless.
-      </p>
-      <ul class="actions">
-        <li><a href="#main" class="button icon solid solo fa-arrow-down scrolly">Enter</a></li>
-      </ul>
-    </div>
-
-    <!-- Header -->
-    <header id="header">
-      <a href="index.html" class="logo">The Weight of Things</a>
-    </header>
-
-    <!-- Nav -->
-    <nav id="nav">
-      <ul class="links">
-        <li class="active"><a href="index.html">Home</a></li>
-        <li><a href="articles.html">Articles</a></li>
-        <li><a href="chai.html">Chai Club</a></li>
-      </ul>
-      <ul class="icons">
-        <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-        <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-      </ul>
+<body>
+  <header class="fade-in">
+    <h1>The Weight of Things</h1>
+    <p>A digital publication for thinkers, feelers, and world-builders. Somewhere between an archive and a love letter. A space for presence, memory, and the quiet joy of noticing.</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="articles.html">Articles</a>
+      <a href="chai.html">Chai Club</a>
     </nav>
+  </header>
 
-    <!-- Main -->
-    <div id="main">
-
-      <!-- Featured Post -->
-      <article class="post featured">
-        <header class="major">
-          <span class="date">June 2025</span>
-          <h2><a href="#">The Tenderness of Collage</a></h2>
-          <p>Collecting as a political gesture. What do we choose to keep, and what does it say about us?</p>
-        </header>
-        <a href="#" class="image main"><img src="images/pic01.jpg" alt="Collage hands" /></a>
-        <ul class="actions special">
-          <li><a href="#" class="button large">Read More</a></li>
-        </ul>
-      </article>
-
-      <!-- Posts -->
-      <section class="posts">
-        <article>
-          <header>
-            <span class="date">June 2025</span>
-            <h2><a href="#">Notes on Belonging</a></h2>
-          </header>
-          <a href="#" class="image fit"><img src="images/pic02.jpg" alt="dinner table" /></a>
-          <p>From diaspora to dinner table: reflections on home, absence, and making meaning through ritual.</p>
-          <ul class="actions special">
-            <li><a href="#" class="button">Full Story</a></li>
-          </ul>
-        </article>
-      </section>
-
+  <section class="featured">
+    <div class="article fade-in">
+      <h2>The Tenderness of Collage: Collecting as a Political Gesture</h2>
+      <p>A reflection on collecting, archiving, and the intimacy of building memory through fragments. What we save says something about what we long for.</p>
     </div>
-
-    <!-- Footer -->
-    <footer id="footer">
-      <section class="split contact">
-        <section class="alt">
-          <h3>Email</h3>
-          <p><a href="mailto:weightofthings.org@gmail.com">weightofthings.org@gmail.com</a></p>
-        </section>
-        <section>
-          <h3>Follow</h3>
-          <ul class="icons alt">
-            <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-            <li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-          </ul>
-        </section>
-      </section>
-    </footer>
-
-    <div id="copyright">
-      <ul><li>&copy; The Weight of Things</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+    <div class="article fade-in">
+      <h2>Notes on Belonging: From Diaspora to Dinner Table</h2>
+      <p>Tracing how food rituals, smells, and kitchen stories help reconstruct identity across generations and oceans.</p>
     </div>
+  </section>
 
-  </div>
-
-  <!-- Scripts -->
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/jquery.scrollex.min.js"></script>
-  <script src="assets/js/jquery.scrolly.min.js"></script>
-  <script src="assets/js/browser.min.js"></script>
-  <script src="assets/js/breakpoints.min.js"></script>
-  <script src="assets/js/util.js"></script>
-  <script src="assets/js/main.js"></script>
-
+  <footer>
+    <p>&copy; 2025 The Weight of Things. All rights reserved.</p>
+  </footer>
 </body>
 </html>
