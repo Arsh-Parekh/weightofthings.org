@@ -1,138 +1,140 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Weight of Things</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
       font-family: 'Playfair Display', serif;
-      background-color: #f5f1ee;
       color: #1a1a1a;
-      line-height: 1.7;
-      padding: 2rem;
-      overflow-x: hidden;
+      background-color: #fefcf9;
     }
-
-    header {
-      text-align: center;
-      margin-bottom: 4rem;
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeInUp 1.2s ease forwards;
-    }
-
     .logo {
-      font-size: 3rem;
-      letter-spacing: 2px;
+      font-size: 2.5em;
       font-weight: bold;
+      letter-spacing: 1px;
     }
-
-    .subtitle {
-      font-family: 'Roboto', sans-serif;
-      font-size: 1rem;
-      margin-top: 0.5rem;
-      color: #555;
-    }
-
-    nav {
-      text-align: center;
-      margin-top: 2rem;
-    }
-
-    nav a {
-      margin: 0 15px;
-      font-family: 'Roboto', sans-serif;
-      font-size: 0.95rem;
-      text-decoration: none;
-      color: #1a1a1a;
-      border-bottom: 1px solid transparent;
-      transition: all 0.3s ease;
-    }
-
-    nav a:hover {
-      border-bottom: 1px solid #1a1a1a;
-    }
-
     .manifesto {
-      max-width: 700px;
-      margin: 0 auto 5rem;
-      font-size: 1.1rem;
-      text-align: center;
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeInUp 1.2s ease 0.6s forwards;
-    }
-
-    .post {
-      max-width: 650px;
-      margin: 0 auto 4rem;
-      padding: 1.5rem;
-      border-top: 1px solid #ccc;
-      opacity: 0;
-      transform: translateY(40px);
-      animation: fadeInUp 1.2s ease forwards;
-    }
-
-    .post:nth-child(1) {
-      animation-delay: 1s;
-    }
-
-    .post:nth-child(2) {
-      animation-delay: 1.4s;
-    }
-
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-
-    p {
       font-family: 'Roboto', sans-serif;
-      font-size: 1rem;
-      color: #333;
+      font-size: 1.15em;
+      max-width: 750px;
+      margin: 0 auto;
+      line-height: 1.8;
+      padding: 2em 1em;
+      text-align: center;
     }
-
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .post h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8em;
+    }
+    .post p {
+      font-family: 'Roboto', sans-serif;
     }
   </style>
 </head>
-<body>
-  <header>
-    <div class="logo">The Weight of Things</div>
-    <div class="subtitle">a space for subtlety, slowness, and soul</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="articles.html">Articles</a>
-      <a href="chai.html">Chai Club</a>
+<body class="is-preload">
+
+  <!-- Wrapper -->
+  <div id="wrapper" class="fade-in">
+
+    <!-- Intro -->
+    <div id="intro">
+      <h1 class="logo">THE WEIGHT OF THINGS</h1>
+      <p class="manifesto">
+        <em>The Weight of Things</em> is a digital publication for thinkers, feelers, and world-builders. We trace the intimate patterns behind art, memory, culture, and longing. Somewhere between an archive and a love letter, this is a space for presence, perspective, and the quiet joy of noticing.<br><br>
+        Our gatherings, essays, and obsessions are stitched together by an enduring belief: that nothing meaningful is ever truly weightless.
+      </p>
+      <ul class="actions">
+        <li><a href="#main" class="button icon solid solo fa-arrow-down scrolly">Enter</a></li>
+      </ul>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+      <a href="index.html" class="logo">The Weight of Things</a>
+    </header>
+
+    <!-- Nav -->
+    <nav id="nav">
+      <ul class="links">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="chai.html">Chai Club</a></li>
+      </ul>
+      <ul class="icons">
+        <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+        <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+      </ul>
     </nav>
-  </header>
 
-  <div class="manifesto">
-    <p>
-      We live in a culture of immediacy. Everything is urgent, efficient, optimized. But some things resist speed. <em>The Weight of Things</em> is a space for the fragments that take time to understand. A home for the obsessive, the thoughtful, the too-much-feelers. It’s not about adding more noise, but about tuning into frequencies you didn’t know you missed.
-    </p>
+    <!-- Main -->
+    <div id="main">
+
+      <!-- Featured Post -->
+      <article class="post featured">
+        <header class="major">
+          <span class="date">June 2025</span>
+          <h2><a href="#">The Tenderness of Collage</a></h2>
+          <p>Collecting as a political gesture. What do we choose to keep, and what does it say about us?</p>
+        </header>
+        <a href="#" class="image main"><img src="images/pic01.jpg" alt="Collage hands" /></a>
+        <ul class="actions special">
+          <li><a href="#" class="button large">Read More</a></li>
+        </ul>
+      </article>
+
+      <!-- Posts -->
+      <section class="posts">
+        <article>
+          <header>
+            <span class="date">June 2025</span>
+            <h2><a href="#">Notes on Belonging</a></h2>
+          </header>
+          <a href="#" class="image fit"><img src="images/pic02.jpg" alt="dinner table" /></a>
+          <p>From diaspora to dinner table: reflections on home, absence, and making meaning through ritual.</p>
+          <ul class="actions special">
+            <li><a href="#" class="button">Full Story</a></li>
+          </ul>
+        </article>
+      </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <section class="split contact">
+        <section class="alt">
+          <h3>Email</h3>
+          <p><a href="mailto:weightofthings.org@gmail.com">weightofthings.org@gmail.com</a></p>
+        </section>
+        <section>
+          <h3>Follow</h3>
+          <ul class="icons alt">
+            <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+            <li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+          </ul>
+        </section>
+      </section>
+    </footer>
+
+    <div id="copyright">
+      <ul><li>&copy; The Weight of Things</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+    </div>
+
   </div>
 
-  <div class="post">
-    <h2>Dear Somebody: On Letters Never Sent</h2>
-    <p>A meditation on what it means to write for no one and everyone. A letter to the one who never answered. Or maybe to yourself. Or maybe both.</p>
-  </div>
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
 
-  <div class="post">
-    <h2>The Texture of Mornings</h2>
-    <p>There is a kind of sacredness to how we begin. This is about rituals you never named, coffees you drank half of, the ache of ordinary time.</p>
-  </div>
 </body>
 </html>
