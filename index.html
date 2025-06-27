@@ -11,6 +11,11 @@
       --primary-color: #3e3e3e;
       --accent-color: #5e574d;
       --link-color: #7b6952;
+      --highlight-color: #ece7e1;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -22,29 +27,35 @@
       overflow-x: hidden;
     }
 
-    header {
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 0 2rem;
       text-align: center;
-      padding: 4rem 1rem 2rem;
+      background: var(--highlight-color);
+    }
+
+    .hero h1 {
       font-family: 'Playfair Display', serif;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
+      font-size: 4rem;
+      margin-bottom: 1rem;
       color: var(--accent-color);
+      animation: fadeInUp 1.5s ease-out forwards;
     }
 
-    header p {
-      font-size: 1.2rem;
+    .hero p {
       max-width: 600px;
-      margin: 0 auto;
-      line-height: 1.7;
+      font-size: 1.2rem;
       font-style: italic;
+      animation: fadeInUp 2s ease-out forwards;
     }
 
     nav {
       text-align: center;
-      margin-top: 1rem;
+      margin: 2rem 0;
     }
 
     nav a {
@@ -52,6 +63,11 @@
       margin: 0 1rem;
       text-decoration: none;
       font-weight: 400;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent-color);
     }
 
     section.featured {
@@ -61,16 +77,17 @@
     }
 
     .article {
-      margin-bottom: 3rem;
+      margin-bottom: 4rem;
       padding-bottom: 2rem;
-      border-bottom: 1px solid #ccc;
+      border-bottom: 1px solid #ddd;
+      animation: fadeInUp 1.5s ease-out forwards;
     }
 
     .article h2 {
       font-family: 'Playfair Display', serif;
       font-size: 2rem;
-      margin-bottom: 0.5rem;
       color: var(--accent-color);
+      margin-bottom: 0.5rem;
     }
 
     .article p {
@@ -86,20 +103,20 @@
       padding: 3rem 1rem 2rem;
     }
 
-    .fade-in {
-      animation: fadeIn ease 2s;
-      animation-iteration-count: 1;
-      animation-fill-mode: forwards;
-    }
-
-    @keyframes fadeIn {
-      0% {opacity:0;}
-      100% {opacity:1;}
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
 <body>
-  <header class="fade-in">
+  <section class="hero">
     <h1>The Weight of Things</h1>
     <p>A digital publication for thinkers, feelers, and world-builders. Somewhere between an archive and a love letter. A space for presence, memory, and the quiet joy of noticing.</p>
     <nav>
@@ -107,14 +124,14 @@
       <a href="articles.html">Articles</a>
       <a href="chai.html">Chai Club</a>
     </nav>
-  </header>
+  </section>
 
   <section class="featured">
-    <div class="article fade-in">
+    <div class="article">
       <h2>The Tenderness of Collage: Collecting as a Political Gesture</h2>
       <p>A reflection on collecting, archiving, and the intimacy of building memory through fragments. What we save says something about what we long for.</p>
     </div>
-    <div class="article fade-in">
+    <div class="article">
       <h2>Notes on Belonging: From Diaspora to Dinner Table</h2>
       <p>Tracing how food rituals, smells, and kitchen stories help reconstruct identity across generations and oceans.</p>
     </div>
